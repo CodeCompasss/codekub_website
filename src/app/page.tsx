@@ -1,103 +1,69 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="min-h-screen bg-gradient-to-b from-[#0e0f1a] to-[#0b0c14] text-slate-200 flex flex-col items-center px-6">
+      
+      {/* Header */}
+      <section className="mt-24 text-center max-w-3xl">
+        <h1 className="text-5xl font-bold tracking-tight text-green-400">
+          CODEKUB
+        </h1>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+        <p className="mt-4 text-lg text-slate-400">
+          A CSE-focused developer setup for Ubuntu 24.04+
+          <br />
+          <span className="text-slate-500">
+            Built on top of Omakub, tailored for Computer Science & Engineering students
+          </span>
+        </p>
+
+        {/* Install Command */}
+        <div className="mt-8 bg-[#151728] border border-slate-700 rounded-lg px-5 py-3 font-mono text-sm text-slate-300 inline-flex items-center gap-3">
+          <span>
+            curl -sSL https://raw.githubusercontent.com/CodeCompasss/codekub/main/boot.sh | bash
+          </span>
+        </div>
+
+        {/* Manual Button */}
+        <div className="mt-6">
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="https://codecompasss.github.io/codekub_userguide/"
+            className="inline-flex items-center gap-2 rounded-md bg-indigo-500/20 px-5 py-2 text-sm font-medium text-indigo-300 hover:bg-indigo-500/30 transition"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
+            📘 Manual
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+      </section>
+
+      {/* Video Section */}
+      <section className="mt-16 w-full max-w-4xl">
+        <div className="relative aspect-video rounded-xl overflow-hidden border border-slate-700 shadow-lg">
+          <iframe
+            className="w-full h-full"
+            src="https://www.youtube.com/embed/3avLiLyseS8"
+            title="Codekub Overview"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
+        </div>
+      </section>
+
+      {/* Description */}
+      <section className="mt-12 max-w-3xl text-center text-slate-400">
+        <p>
+          Codekub provides a ready-to-use Linux development environment with tools,
+          configurations, and workflows commonly used in academics, competitive programming,
+          systems, web, and software development—so students can focus on learning, not setup.
+        </p>
+      </section>
+
+      {/* Footer */}
+      <footer className="mt-24 mb-10 text-center text-slate-500 text-sm">
+        <p>Brought to you by</p>
+        <a href="https://code-compass-website.vercel.app/">
+        <p className="mt-1 font-semibold text-slate-300">CodeCompass</p>
         </a>
       </footer>
-    </div>
+
+    </main>
   );
 }
