@@ -5,7 +5,7 @@ import { useState } from "react";
 export default function Home() {
   const [copied, setCopied] = useState(false);
   const installCommand =
-    " curl -sSL https://bit.ly/44PRhYy| bash";
+    " curl -sSL https://bit.ly/44PRhYy | bash ";
 
   const handleCopy = () => {
     navigator.clipboard.writeText(installCommand);
